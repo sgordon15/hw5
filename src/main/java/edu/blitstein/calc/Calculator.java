@@ -8,8 +8,7 @@ public class Calculator {
 
     //Numbers this close to zero are treated as if equal to zero.
     public static void main(String[] args)
-            throws DivideByZeroException,
-            UnknownOpException {
+            throws DivideByZeroException, UnknownOpException {
         Calculator clerk = new Calculator();
         System.out.println("Calculator is on.");
         System.out.print("Format of each line: ");
@@ -66,8 +65,8 @@ public class Calculator {
         return answer;
     }
 
-    public void doCalculation() throws DivideByZeroException,
-            UnknownOpException {
+    public void doCalculation()
+            throws DivideByZeroException, UnknownOpException {
         Scanner keyboard = new Scanner(System.in);
         boolean done = false;
         result = 0;
@@ -79,8 +78,7 @@ public class Calculator {
             else {
                 double nextNumber = keyboard.nextDouble();
                 result = evaluate(nextOp, result, nextNumber);
-                System.out.println("result " + nextOp + " " +
-                        nextNumber + " = " + result);
+                System.out.println("result " + nextOp + " " + nextNumber + " = " + result);
                 System.out.println("updated result = " + result);
             }
         }
