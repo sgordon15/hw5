@@ -1,4 +1,4 @@
-package edu.blitstein.calc;
+package edu.blitstein.calc.calculator;
 
 import org.junit.Test;
 
@@ -8,9 +8,5 @@ public class CalculatorTest {
 
     @Test
     public void evaluate() {
-    }
-
-    @Test
-    public void doCalculation() {
     }
 }
