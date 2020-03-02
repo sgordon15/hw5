@@ -1,6 +1,6 @@
 package edu.blitstein.calc;
 
-import edu.blitstein.calc.calculator.Calculator;
+import edu.blitstein.calc.engine.Calculator;
 import edu.blitstein.calc.exception.DivideByZeroException;
 
 import java.util.Scanner;

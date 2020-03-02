@@ -1,14 +1,9 @@
-package edu.blitstein.calc.calculator;
+package edu.blitstein.calc.engine.op;
 
-public enum Operation {
+public enum BinaryOperation {
     PLUS("+") {
           double apply(double x, double y) {
             return x + y;
-          }
-        },
-    MINUS("-") {
-          double apply(double x, double y) {
-            return x - y;
           }
         },
     TIMES("*") {
@@ -19,7 +14,7 @@ public enum Operation {
 
     private final String symbol;
 
-    private Operation(String symbol) {
+    BinaryOperation(String symbol) {
       this.symbol = symbol;
     }
 
@@ -28,5 +23,5 @@ public enum Operation {
       return symbol;
     }
 
-    abstract double apply(double x, double y);
+    abstract double apply(double x, double y) throws ArithmeticException;
 }

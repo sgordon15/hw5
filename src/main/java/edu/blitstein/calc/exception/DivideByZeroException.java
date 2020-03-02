@@ -5,7 +5,6 @@ public class DivideByZeroException extends Exception {
         super("Dividing by Zero!");
     }
 
-
     public DivideByZeroException(String message) {
         super(message);
     }

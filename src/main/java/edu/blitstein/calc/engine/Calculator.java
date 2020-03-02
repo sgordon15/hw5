@@ -1,4 +1,4 @@
-package edu.blitstein.calc.calculator;
+package edu.blitstein.calc.engine;
 
 import edu.blitstein.calc.exception.DivideByZeroException;
 
