@@ -1,6 +1,7 @@
 package edu.blitstein.calc.engine;
 
 import edu.blitstein.calc.exception.DivideByZeroException;
+import edu.blitstein.calc.exception.UnknownOpException;
 
 public class Calculator {
     private double result;
@@ -31,7 +32,7 @@ public class Calculator {
      * Any other value of op throws UnknownOpException.
      */
     public double evaluate(char op, double n1, double n2)
-            throws DivideByZeroException {
+            throws DivideByZeroException, UnknownOpException {
         double answer;
         switch (op) {
             case '+':
