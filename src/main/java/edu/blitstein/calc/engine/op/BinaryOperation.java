@@ -1,16 +1,34 @@
 package edu.blitstein.calc.engine.op;
 
+import edu.blitstein.calc.exception.DivideByZeroException;
+
 public enum BinaryOperation {
     PLUS("+") {
-          double apply(double x, double y) {
+          public double apply(double x, double y) {
             return x + y;
           }
         },
+    MINUS("-"){
+        public double apply(double x, double y) {return x - y;}
+    },
     TIMES("*") {
-          double apply(double x, double y) {
-            return x * y;
-          }
-        };
+          public double apply(double x, double y) {return x * y; }
+    },
+    DIVIDE("/"){
+        public double apply(double x, double y) {
+            double precision = 0.001;
+            if (y < precision && y > -precision)
+            {
+                throw new DivideByZeroException();
+            }
+            return x / y; }
+        },
+    OFF("@"){
+        public double apply(double x, double y) {
+            System.exit(0);
+            return 0.0;
+        }
+    };
 
     private final String symbol;
 
@@ -23,5 +41,5 @@ public enum BinaryOperation {
       return symbol;
     }
 
-    abstract double apply(double x, double y) throws ArithmeticException;
+    public abstract double apply(double x, double y) throws ArithmeticException;
 }
